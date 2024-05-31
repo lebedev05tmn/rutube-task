@@ -1,0 +1,13 @@
+@import "../shared/styles/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $base-white;
+}
+
+body {
+  background-color: $base-black;
+  font-family: "Roboto";
+}
