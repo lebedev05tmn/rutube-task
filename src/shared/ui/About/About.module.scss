@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Title {
+  @include h1;
+}
+
+.Description {
+  @include paragraph;
+  text-align: center;
+}

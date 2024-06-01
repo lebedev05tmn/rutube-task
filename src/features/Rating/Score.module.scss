@@ -1,0 +1,38 @@
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
+
+.Score {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "one one"
+    "two three";
+  row-gap: 8px;
+  justify-items: center;
+
+  > fieldset {
+    grid-area: one;
+  }
+}
+
+.Caption {
+  display: inline-block;
+  justify-self: start;
+  color: $base-gray;
+  margin-left: 32px;
+
+  &:last-of-type {
+    justify-self: end;
+    margin: 0;
+    margin-right: 32px;
+
+    @media screen and (min-width: $tabletWidth) {
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    margin: 0;
+  }
+}

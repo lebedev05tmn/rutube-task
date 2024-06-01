@@ -1,0 +1,31 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.radio {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+  &::before {
+    content: attr(data-title);
+
+    display: block;
+    padding: 10px 16px;
+
+    border: 1px solid $base-blue;
+    border-radius: 50%;
+
+    @include caption;
+  }
+}
+
+.radio:not(:checked):hover + .label::before,
+.radio:not(:checked):focus + .label::before {
+  opacity: 0.5;
+}
+
+.radio:active + .label::before,
+.radio:checked + .label::before {
+  background-color: $base-blue;
+}

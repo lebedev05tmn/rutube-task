@@ -4,17 +4,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 @mixin adaptiveWidth {
-  width: $mobileWidth;
-
-  @media screen and (min-width: $tabletWidth) {
-    width: 100vw;
-  }
+  width: 100%;
 
   @media screen and (min-width: $desktopWidth) {
     width: $desktopWidth;
   }
+}
+
+@mixin h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 35px;
+
+  @media screen and (min-width: $tabletWidth) {
+    font-size: 30px;
+  }
+}
+
+@mixin h3 {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin paragraph {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+  @media screen and (min-width: $tabletWidth) {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+
+@mixin caption {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin button {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
 }

@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./config";
+import Routing from "./config";
+import withLayout from "shared/hocs/withLayout";
 
-// Формирование роутера
+// Формирование роутера с HOC Layout
 
-const Routing: FC = () => <RouterProvider router={router} />;
+const LayoutedRouting: FC = withLayout(Routing);
 
-export default Routing;
+export default LayoutedRouting;

@@ -1,9 +1,15 @@
 import { FC } from "react";
+import Score from "widgets/Score";
+import { Decoration } from "shared/ui";
 
 const Main: FC = () => {
   return (
     <>
-      <h1>Main</h1>
+      <Decoration
+        src="https://i.postimg.cc/zX7kBpCv/image.png"
+        width={455.36}
+      />
+      <Score />
     </>
   );
 };

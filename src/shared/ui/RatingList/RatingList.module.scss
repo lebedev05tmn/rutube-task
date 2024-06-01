@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.legend {
+  display: none;
+}
+
+.fieldset {
+  width: 223px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
+.Score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  width: 343px;
+  box-sizing: content-box;
+
+  @media screen and (min-width: $tabletWidth) {
+    box-sizing: border-box;
+    gap: 28px;
+    padding: 10px;
+    width: 550px;
+  }
+}

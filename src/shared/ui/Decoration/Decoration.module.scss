@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.Image {
+  object-fit: contain;
+  width: 373.39px;
+  height: auto;
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 524px;
+  }
+}

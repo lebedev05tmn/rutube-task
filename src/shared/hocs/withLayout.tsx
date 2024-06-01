@@ -4,8 +4,8 @@ import { Header, Wrapper } from "shared/ui";
 // HOC для Layout приложения
 
 const withLayout =
-  (Component: FC<PropsWithChildren>): FC<PropsWithChildren> =>
-  (props: PropsWithChildren) =>
+  <T,>(Component: FC<PropsWithChildren<T>>): FC<PropsWithChildren<T>> =>
+  (props: PropsWithChildren<T>) =>
     (
       <>
         <Header />
