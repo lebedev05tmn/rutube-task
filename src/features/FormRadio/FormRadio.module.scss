@@ -1,0 +1,20 @@
+@import "../../shared/styles/mixins.scss";
+
+.fieldset {
+  border: none;
+}
+
+.legend {
+  @include h3;
+  margin-bottom: 8px;
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &[data-type="form"] {
+    flex-direction: column;
+  }
+}

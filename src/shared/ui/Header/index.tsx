@@ -1,11 +1,12 @@
 import { FC } from "react";
+import { PLATFORM_LINK } from "shared/config";
 import styles from "./Header.module.scss";
 
 const Header: FC = () => {
   return (
     <header className={styles.Header}>
       <section className={styles.HeaderSection} id="link">
-        <a href="https://rutube.ru" target="_blank">
+        <a href={PLATFORM_LINK} target="_blank">
           <img
             width="148"
             height="40"

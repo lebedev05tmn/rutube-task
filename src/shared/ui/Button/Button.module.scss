@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Button {
+  @include button;
+
+  display: block;
+  width: 222px;
+  padding: 12px 0;
+  border-radius: 22px;
+  background-color: $blue-accent;
+  border: none;
+
+  &[data-type="form"] {
+    width: 100%;
+
+    @media screen and (min-width: $tabletWidth) {
+      width: 222px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../shared/styles/mixins.scss";
+
+.FeedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 16px;
+
+  @include adaptiveWidth;
+}

@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.Container {
+  @include adaptiveWidth;
+  position: relative;
+}
+
+.FormDecoration {
+  display: none;
+
+  @media screen and (min-width: $tabletWidth) {
+    display: block;
+    height: auto;
+    width: 53.515625%;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 149px;
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    width: 581px;
+    height: 540px;
+    top: 133px;
+  }
+}

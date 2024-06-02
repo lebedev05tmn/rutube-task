@@ -1,5 +1,8 @@
 import { createContext } from "react";
-import { IScoreContextType } from "shared/types/inderfaces";
+import {
+  IQuestionResultContextType,
+  IScoreContextType,
+} from "shared/types/interfaces";
 
 export enum AppRoute {
   MAIN = "/",
@@ -9,6 +12,20 @@ export enum AppRoute {
   NOT_FOUND = "*",
 }
 
+export enum RadioTypes {
+  RADIO = "radio",
+  SCORE = "score",
+}
+
+export const PLATFORM_LINK = "https://rutube.ru";
+
 export const FINISH_FLAG = "isFinish";
 
+export const SCORED_FLAG = "isScored";
+
+export const SCORE_SCALE = 10;
+
 export const ScoreContext = createContext<IScoreContextType | null>(null);
+
+export const QuestionResultContext =
+  createContext<IQuestionResultContextType | null>(null);

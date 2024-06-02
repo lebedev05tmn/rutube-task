@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IAbout } from "shared/types/inderfaces";
+import { IAbout } from "shared/types/interfaces";
 
 import styles from "./About.module.scss";
 

@@ -15,4 +15,12 @@
   @media screen and (min-width: $tabletWidth) {
     width: 524px;
   }
+
+  &[data-type="main"] {
+    width: 373.39px;
+
+    @media screen and (min-width: $tabletWidth) {
+      width: 455.36px;
+    }
+  }
 }

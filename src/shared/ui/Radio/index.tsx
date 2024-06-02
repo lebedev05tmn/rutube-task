@@ -1,9 +1,8 @@
 import { FC, memo } from "react";
+import styles from "./RatingButton.module.scss";
 import { IRatingButton } from "shared/types/interfaces";
 
-import styles from "./RatingButton.module.scss";
-
-const RatingButton: FC<IRatingButton> = memo(({ id, title, ...props }) => {
+const RadioButton: FC<IRatingButton> = memo(({ id, title, ...props }) => {
   const dataAttr = { "data-title": title };
 
   return (
@@ -14,4 +13,4 @@ const RatingButton: FC<IRatingButton> = memo(({ id, title, ...props }) => {
   );
 });
 
-export { RatingButton };
+export { RadioButton };

@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 10px;
 
   @media screen and (min-width: $tabletWidth) {
     width: 100%;

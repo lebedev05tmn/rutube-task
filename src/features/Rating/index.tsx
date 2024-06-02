@@ -1,20 +1,21 @@
 import { useCallback, ChangeEvent, useState } from "react";
-import { RatingButton, RatingList } from "shared/ui";
-import styles from "./Score.module.scss";
-import { useScore } from "shared/hooks/useScore";
 import { Navigate } from "react-router-dom";
-import { AppRoute } from "shared/config";
+import { RatingButton, RatingList } from "shared/ui";
+import { useScore } from "shared/hooks/useScore";
+import { AppRoute, SCORED_FLAG, SCORE_SCALE } from "shared/config";
+
+import styles from "./Score.module.scss";
 
 const Rating = () => {
   const { setScore } = useScore();
   const [isScored, setIsScored] = useState<boolean>(
-    JSON.parse(sessionStorage.getItem("isScored") || "false")
+    JSON.parse(sessionStorage.getItem(SCORED_FLAG) || "false")
   );
 
   const handleRating = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       setScore(Number(e.target.value));
-      sessionStorage.setItem("isScored", "true");
+      sessionStorage.setItem(SCORED_FLAG, "true");
       setIsScored(true);
     },
     [setScore, setIsScored]
@@ -23,9 +24,9 @@ const Rating = () => {
   if (isScored) return <Navigate to={AppRoute.FEEDBACK} />;
 
   return (
-    <section className={styles.Score} id="score">
+    <form className={styles.Score} id="score">
       <RatingList>
-        {Array(10)
+        {Array(SCORE_SCALE)
           .fill("")
           .map((_, index: number) => {
             const id: string = `score-${index}`;
@@ -34,7 +35,8 @@ const Rating = () => {
                 id={id}
                 key={id}
                 name="score"
-                title={String(index)}
+                value={index}
+                title={index.toString()}
                 onChange={handleRating}
               />
             );
@@ -42,7 +44,7 @@ const Rating = () => {
       </RatingList>
       <span className={styles.Caption}>Хуже некуда</span>
       <span className={styles.Caption}>Отлично</span>
-    </section>
+    </form>
   );
 };
 

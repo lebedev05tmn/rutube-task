@@ -12,9 +12,13 @@
 
     display: block;
     padding: 10px 16px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
 
     border: 1px solid $base-blue;
-    border-radius: 50%;
+    border-radius: 20px;
+    text-align: start;
 
     @include caption;
   }
@@ -28,4 +32,9 @@
 .radio:active + .label::before,
 .radio:checked + .label::before {
   background-color: $base-blue;
+}
+
+.radio[data-type="form"] + .label::before {
+  box-sizing: border-box;
+  width: 200px;
 }

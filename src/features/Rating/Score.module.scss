@@ -17,6 +17,7 @@
 }
 
 .Caption {
+  @include caption;
   display: inline-block;
   justify-self: start;
   color: $base-gray;
