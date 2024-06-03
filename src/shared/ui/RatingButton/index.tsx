@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { IRatingButton } from "shared/types/interfaces";
+import { IRatingButton } from "shared/interfaces/interfaces";
 
 import styles from "./RatingButton.module.scss";
 

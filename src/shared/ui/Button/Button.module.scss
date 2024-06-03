@@ -4,11 +4,14 @@
 .Button {
   @include button;
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
   width: 222px;
   padding: 12px 0;
   border-radius: 22px;
   background-color: $blue-accent;
+  opacity: 1;
   border: none;
 
   &[data-type="form"] {
@@ -17,5 +20,14 @@
     @media screen and (min-width: $tabletWidth) {
       width: 222px;
     }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    opacity: 0.7;
   }
 }

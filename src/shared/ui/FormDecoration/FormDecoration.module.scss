@@ -9,7 +9,7 @@
 .FormDecoration {
   display: none;
 
-  @media screen and (min-width: $tabletWidth) {
+  @media screen and (min-width: $largeWidth) {
     display: block;
     height: auto;
     width: 53.515625%;

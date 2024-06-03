@@ -1,4 +1,9 @@
-import { InputHTMLAttributes, Dispatch, SetStateAction } from "react";
+import {
+  InputHTMLAttributes,
+  Dispatch,
+  SetStateAction,
+  ChangeEvent,
+} from "react";
 
 export interface IAbout {
   title: string;
@@ -28,7 +33,7 @@ export interface IQuestionResultContextType {
 
 export interface IQuestionVariant {
   text: string;
-  responseId: number;
+  responseID: number;
 }
 
 export interface IQuestionAnswer {
@@ -38,4 +43,15 @@ export interface IQuestionAnswer {
   variants?: IQuestionVariant[];
   min_scale?: number;
   max_scale?: number;
+}
+
+export interface IRadio {
+  title: string;
+  type: string;
+  variants?: IQuestionVariant[];
+  minScale?: number;
+  maxScale?: number;
+  id: number;
+  onChange?: Dispatch<ChangeEvent<HTMLInputElement>>;
+  question?: IQuestionResult;
 }

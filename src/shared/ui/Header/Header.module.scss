@@ -30,3 +30,9 @@
     }
   }
 }
+
+.Link {
+  @media screen and (max-width: ($desktopWidth - 1px)) {
+    margin-left: 20px;
+  }
+}

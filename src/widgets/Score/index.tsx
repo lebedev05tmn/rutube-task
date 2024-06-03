@@ -1,17 +1,15 @@
 import { FC } from "react";
-import { About } from "shared/ui";
+import { About, Section } from "shared/ui";
 import Rating from "features/Rating";
 
-import styles from "./Score.module.scss";
-
 const Score: FC = () => (
-  <section className={styles.Score}>
+  <Section>
     <About
       title="Уважаемый клиент!"
-      description="Запрос закрыт. Пожалуйста, оцените качество предоставленного сервиса по данному обращению, используя шкалу от 0 до 9, где 0 является «Хуже некуда и 9 — «Отлично»."
+      description="Запрос закрыт. Пожалуйста, оцените качество предоставленного сервиса по данному обращению, используя шкалу от 0 до 9, где 0<br /> является «Хуже некуда и 9 — «Отлично»."
     />
     <Rating />
-  </section>
+  </Section>
 );
 
 export default Score;

@@ -6,3 +6,4 @@ export { RatingList } from "./RatingList";
 export { Decoration } from "./Decoration";
 export { Button } from "./Button";
 export { FormDecoration } from "./FormDecoration";
+export { Section } from "./Section";

@@ -46,6 +46,10 @@ const appRoutes = createBrowserRouter([
 
 const finishRoutes = createBrowserRouter([
   {
+    path: AppRoute.GREETINGS,
+    element: <Greetings />,
+  },
+  {
     path: AppRoute.NOTIFICATION,
     element: <Notification />,
   },

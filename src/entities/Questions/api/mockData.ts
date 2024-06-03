@@ -1,4 +1,4 @@
-import { IQuestionAnswer } from "shared/types/interfaces";
+import { IQuestionAnswer } from "shared/interfaces/interfaces";
 
 export const questionsData: IQuestionAnswer[] = [
   {
@@ -6,9 +6,9 @@ export const questionsData: IQuestionAnswer[] = [
     questionID: 1,
     type: "radio",
     variants: [
-      { text: "Быстрее, чем ожидал", responseId: 1 },
-      { text: "Как и ожидал", responseId: 2 },
-      { text: "Быстрее, чем ожидал", responseId: 3 },
+      { text: "Быстрее, чем ожидал", responseID: 1 },
+      { text: "Как и ожидал", responseID: 2 },
+      { text: "Быстрее, чем ожидал", responseID: 3 },
     ],
   },
   {

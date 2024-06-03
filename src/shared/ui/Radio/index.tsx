@@ -1,6 +1,6 @@
 import { FC, memo } from "react";
 import styles from "./RatingButton.module.scss";
-import { IRatingButton } from "shared/types/interfaces";
+import { IRatingButton } from "shared/interfaces/interfaces";
 
 const RadioButton: FC<IRatingButton> = memo(({ id, title, ...props }) => {
   const dataAttr = { "data-title": title };

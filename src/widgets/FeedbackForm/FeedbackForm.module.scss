@@ -1,10 +1,20 @@
 @import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
 
 .FeedbackForm {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-left: 16px;
+  padding: 0 16px;
 
   @include adaptiveWidth;
+}
+
+.title {
+  @include paragraph;
+  color: $base-gray;
+  margin-top: 16px;
+
+  font-size: 17px;
+  line-height: 22px;
 }
