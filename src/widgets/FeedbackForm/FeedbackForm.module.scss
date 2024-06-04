@@ -5,7 +5,11 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 0 16px;
+  padding: 16px;
+
+  @media screen and (min-width: $tabletWidth) {
+    padding-bottom: 24px;
+  }
 
   @include adaptiveWidth;
 }
@@ -13,7 +17,6 @@
 .title {
   @include paragraph;
   color: $base-gray;
-  margin-top: 16px;
 
   font-size: 17px;
   line-height: 22px;
